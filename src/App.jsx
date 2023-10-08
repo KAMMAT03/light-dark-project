@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import Nav from "./components/Nav";
+import Main from "./components/Main";
 
 export default function App() {
   return (
-    <h1>Hello World!</h1>
+    <div className="container">
+      <Nav />
+      <Main />
+    </div>
   )
 }
 
