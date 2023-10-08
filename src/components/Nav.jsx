@@ -1,11 +1,28 @@
 
 
-export default function Nav(){
+export default function Nav(props) {
     return (
-        <nav>
-            <img className="nav-icon" src="reactjs-icon.svg" alt="" />
-            <p className="nav-title">ReactFacts</p>
-            <p className="nav-info">React Course - Project 1</p>
+         <nav 
+            className={props.darkMode ? "dark": ""}
+        >
+            <img 
+                className="nav--logo_icon"
+                src="reactjs-icon.svg"
+            />
+            <h3 className="nav--logo_text">ReactFacts</h3>
+            
+            <div 
+                className="toggler" 
+            >
+                <p className="toggler--light">Light</p>
+                <div 
+                    className="toggler--slider"
+                    onClick={props.toggleDarkMode}
+                >
+                    <div className="toggler--slider--circle"></div>
+                </div>
+                <p className="toggler--dark">Dark</p>
+            </div>
         </nav>
     )
 }
